@@ -87,11 +87,12 @@ namespace Control_Task
 
             for (int i = 0; i < inputCity.Length; i++)
             {
-                double density = inputCity[i].Population / inputCity[i].Area;
+                double density = (double)inputCity[i].Population / inputCity[i].Area;
                 Console.WriteLine("Density:" + inputCity[i].Name);
                 Console.WriteLine(density);
             }
 
+            int maxNameLength = 0;
             int maxPopul = 0;
             for (int i = 0; i < inputCity.Length; i++)
             {
@@ -99,7 +100,6 @@ namespace Control_Task
                     maxPopul = inputCity[i].Population;
             }
 
-            int maxNameLength = 0;
             for (int i = 0; i < inputCity.Length; i++)
             {
                 if (inputCity[i].Name.Length > maxNameLength)
@@ -114,8 +114,6 @@ namespace Control_Task
                     Console.WriteLine("Max name lenght: " + inputCity[i].Name);
 
             }
-
-
         }
     }
 }
