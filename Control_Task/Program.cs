@@ -109,9 +109,9 @@ namespace Control_Task
             for (int i = 0; i < inputCity.Length; i++)
             {
                 if (inputCity[i].Population == maxPopul)
-                    Console.WriteLine("Max Population City : " + inputCity[i].Name);
+                    Console.WriteLine("Most Populated City : " + inputCity[i].Name);
                 if(inputCity[i].Name.Length == maxNameLength)
-                    Console.WriteLine("Max name lenght: " + inputCity[i].Name);
+                    Console.WriteLine("Largest name lenght City: " + inputCity[i].Name);
 
             }
         }
