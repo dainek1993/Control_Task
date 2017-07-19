@@ -20,8 +20,8 @@ namespace Control_Task
             string inputString = Console.ReadLine();
             string[] splitedStrs = new string[0];
             City[] inputCity;
-            string tmp = string.Empty; ;
-
+            string tmp = string.Empty;
+            inputString = inputString[inputString.Length -1] == ';' ? inputString : inputString + ";";
             for (int i = 0, j = 0; i < inputString.Length; i++)
             {
                 if (inputString[i] != ';')
@@ -33,13 +33,12 @@ namespace Control_Task
                     string[] tmpArr = new string[splitedStrs.Length + 1];
                     for (int k = 0; k < splitedStrs.Length; k++)
                     {
-                        tmpArr[k] = splitedStrs[k]; 
+                        tmpArr[k] = splitedStrs[k];
                     }
                     splitedStrs = tmpArr;
                     splitedStrs[j++] = tmp;
                     tmp = string.Empty;
                 }
-
             }
 
 
